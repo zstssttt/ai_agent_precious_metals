@@ -1,0 +1,8 @@
+﻿series,period,ann_return,ann_turnover,ann_vol,Sharpe,max_drawdown,Calmar,win_rate,n_days,total_return,start,end,Sharpe_SE
+strategy_sharpe_weighted_6factor,in_sample_full,0.0512,6.2407,0.0545,0.939,0.1045,0.489,0.5207,4614,1.4835,2005-01-06,2023-12-29,0.234
+strategy_sharpe_weighted_6factor,in_sample_2015plus,0.0417,6.518,0.0463,0.9,0.0928,0.449,0.5192,2189,0.4233,2015-01-05,2023-12-29,0.34
+strategy_sharpe_weighted_6factor,out_of_sample,0.0867,5.2821,0.0523,1.659,0.0477,1.818,0.5497,462,0.1693,2024-01-02,2025-11-28,0.741
+Au9995_buy_and_hold,out_of_sample,0.3838,0.0,0.1653,2.321,0.1108,3.464,0.5871,462,0.9701,2024-01-02,2025-11-28,0.742
+CSI300_buy_and_hold_raw,out_of_sample,0.1689,0.0,0.1884,0.896,0.1566,1.078,0.5216,462,0.3193,2024-01-02,2025-11-28,0.739
+CSI300_vol_normalized_to_5.23%,out_of_sample,0.0468,0.0,0.0523,0.896,0.0437,1.071,0.5216,462,0.0869,2024-01-02,2025-11-28,0.739
+Au9995_vol_normalized_to_5.23%,out_of_sample,0.1213,0.0,0.0523,2.321,0.0359,3.379,0.5871,462,0.2459,2024-01-02,2025-11-28,0.742

@@ -1,0 +1,57 @@
+# Resume Bullets — INNO Asset Management, Sept 2025 – Present
+
+Written to match the exact voice, cadence, and quantitative density of Sitong Wang's existing resume. Every headline number is traceable to a file under `results/` (traceability table at the bottom of this doc).
+
+---
+
+## Recommended: 5 bullets
+
+**INNO Asset Management, Quantitative Research Department, Investment Research Intern** — Sept. 2025 – Present
+
+
+## v2
+INNO Asset Management, Quantitative Research Department, Investment Research Intern — Sept. 2025 – Present
+
+- Design and implement a two-layer risk-parity backtest engine adapting the Bridgewater All-Weather framework to China's multi-asset market (2005–2024, benchmarked against CSI 300), allocating 11 assets across four macro quadrants (Q1–Q4) via Ledoit-Wolf shrunk covariance estimation and SLSQP equal-risk-contribution optimization on 252-day rolling windows
+- Engineer a multi-source data pipeline integrating 11 tickers across Chinesemarkets (equity indices, gold, commodities, government bonds), aligning them to a unified China trading calendar via forward-fill imputation; leverage vectorized pandas operations to execute the full 20-year backtest, with a batched matrix-computation pipeline that enforces T+1 execution to prevent look-ahead bias 
+- Identify a critical evaluation flaw during code review, where risk-contribution diagnostics reused the 252-day window used to compute the weights, instead of measuring actual risk during the following month's realized returns; redesign the metric on out-of-sample holding-period data, ultimately delivering Sharpe 1.05 versus CSI 300's 0.41 (2.55×) and compressing maximum drawdown from –40.6% to –9.9% (~4× reduction) over the 20-year unlevered backtest
+
+---
+
+## Alternative: tight 4-bullet version (if space is short)
+
+**INNO Asset Management, Quantitative Research Department, Investment Research Intern** — Sept. 2025 – Present
+
+- Design and implement a two-layer risk-parity backtest engine replicating the Bridgewater All-Weather framework on 20 years of multi-asset data (2005–2024), allocating 11 instruments across four macro quadrants via Ledoit-Wolf shrunk covariance and SLSQP equal-risk-contribution optimization on 252-day rolling windows; achieve Sharpe 1.05 versus CSI 300's 0.41 (2.55×) and compress maximum drawdown from –40.6% to –9.9%
+- Refactor a 100-line daily state-machine backtest loop into a 40-line vectorized three-phase pipeline using pandas `reindex → ffill → shift(1)` for monthly-to-daily weight expansion and cumulative-sum NAV construction; verify bit-for-bit numerical equivalence (NAV diff = 0, risk-contribution max diff = 5×10⁻¹⁰) across 20 years of daily outputs
+- 在code review里Diagnose an in-sample validation flaw in code review where risk-contribution diagnostics reused the 252-day estimation window and measured optimizer convergence rather than realized tracking(严重前视觉偏差); redesign the metric on post-rebalance out-of-sample returns, exposing true %RC dispersion previously masked by ~25% saturation
+- Author asset-class attribution modules decomposing 20-year strategy return and drawdown into equity, bond, commodity, and gold contributions; produce reproducible research artifacts (methodology write-up, decisions log, 8 diagnostic figures) reachable behind a single `python -m` entrypoint
+
+---
+
+## Traceability — every number, where it lives
+
+| Claim in bullets | Source file |
+|---|---|
+| Sharpe 1.05 vs CSI 300 0.41 (2.55×) | `results/performance_metrics.csv` (`sharpe` row) |
+| Max drawdown –9.9% vs –40.6% | `results/performance_metrics.csv` (`max_drawdown` row) |
+| 4× drawdown reduction | 0.406 / 0.0986 = 4.12× |
+| 20 years (2005–2024) | `results/nav.csv`, `annual_performance_metrics.csv` |
+| 11 instruments | `config/asset_mapping.yaml` (`assets` list length) |
+| 4 macro quadrants (Q1–Q4) | `config/asset_mapping.yaml` (quadrant field) |
+| 252-day rolling window | `config/asset_mapping.yaml` (`risk_parity.window_days`) |
+| Ledoit-Wolf covariance | `src/backtest/backtest_engine.py` `two_layer_rp`, `compute_two_layer_rc` |
+| SLSQP optimizer | `src/backtest/backtest_engine.py` `risk_parity_weights` |
+| 100→40 line refactor | `docs/decisions_log.md` §2 |
+| NAV diff = 0, RC diff = 5×10⁻¹⁰ | `docs/decisions_log.md` §2 |
+| In-sample RC fix | `docs/decisions_log.md` §1; code: `_compute_oos_rc` |
+| Five macro regimes | `results/figures/06_period_comparison.png` (GFC / bear / A-share crash / recovery / recent) |
+
+---
+
+## Notes on framing choices (for Sitong)
+
+- **Voice:** kept identical to the existing resume — active verbs, present tense (current role), semicolons compounding two clauses, quantified outcomes, ~35–50 words per bullet.
+- **Data-scientist emphasis:** bullets 3 and 4 (refactor + in-sample bug) are the strongest DS signals — they show pipeline thinking, vectorization, statistical rigor on the train/test split. Interviewers who ask "walk me through your project" should hear these first.
+- **Absolute-return honesty:** the bullets highlight Sharpe and drawdown, not annualized return. This is deliberate: the unlevered version's 4.71% ann. return is below CSI 300's 10.56%, and any DS interviewer with a stats background will notice. The right framing is *risk-per-unit dominance*, which the numbers support unambiguously (2.55× Sharpe, 4× drawdown reduction). If a recruiter probes on absolute return, the answer is in `interview_qa.md` §Q4.
+- **INNO name kept public:** per your resume style; if a specific recruiter requires anonymization, replace with "a Chinese systematic asset manager" (~$5B AUM tier).

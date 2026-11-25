@@ -1,0 +1,23 @@
+# Data — raw and aligned vendor series are not version-controlled
+补齐后数据/
+data/
+*.parquet
+
+# Journal — a run's trial log is an artefact, not source
+journal/*.jsonl
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Secrets
+.env

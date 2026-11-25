@@ -1,0 +1,61 @@
+﻿method,factor,direction,ic,n_obs,n_eff,t_eff,significant_at_|t|>2,basis,note
+contemporaneous_full,pmf_128453,+1,0.00272,5020,,,no,contemporaneous r_t,
+contemporaneous_full,pmf_011095,-1,-0.01536,4928,714.0,-0.41,no,contemporaneous r_t,
+contemporaneous_full,pmf_069545,-1,-0.0321,720,272.0,-0.53,no,contemporaneous r_t,
+contemporaneous_full,pmf_051113,-1,-0.00192,4248,859.0,-0.06,no,contemporaneous r_t,
+contemporaneous_full,pmf_127111,-1,-0.01085,4992,,,no,contemporaneous r_t,
+contemporaneous_full,pmf_125861,-1,-0.01355,5005,,,no,contemporaneous r_t,
+contemporaneous_full,pmf_131810,+1,0.01703,5077,573.0,0.41,no,contemporaneous r_t,
+contemporaneous_full,pmf_104203,+1,0.00044,4868,3074.0,0.02,no,contemporaneous r_t,
+contemporaneous_full,pmf_058341,+1,0.02898,5002,545.0,0.68,no,contemporaneous r_t,
+contemporaneous_full,pmf_102135,+1,0.02323,694,,,no,contemporaneous r_t,
+contemporaneous_full,pmf_003678,+1,0.00069,5077,246.0,0.01,no,contemporaneous r_t,
+contemporaneous_full,pmf_118259,+1,0.06957,718,189.0,0.96,no,contemporaneous r_t,
+contemporaneous_full,pmf_051056,-1,-0.00818,5077,987.0,-0.26,no,contemporaneous r_t,
+contemporaneous_full,pmf_055491,-1,-5e-05,5070,710.0,-0.0,no,contemporaneous r_t,
+contemporaneous_full,pmf_066409,-1,-0.02525,5077,249.0,-0.4,no,contemporaneous r_t,
+forward_full,pmf_128453,-1,-0.01711,5020,,,no,forward r_{t+1},
+forward_full,pmf_011095,-1,-0.01268,4928,714.0,-0.34,no,forward r_{t+1},
+forward_full,pmf_069545,-1,-0.04008,720,272.0,-0.66,no,forward r_{t+1},
+forward_full,pmf_051113,+1,0.00652,4247,859.0,0.19,no,forward r_{t+1},
+forward_full,pmf_127111,-1,-0.00728,4991,,,no,forward r_{t+1},
+forward_full,pmf_125861,-1,-0.02003,5004,,,no,forward r_{t+1},
+forward_full,pmf_131810,+1,0.01742,5077,573.0,0.42,no,forward r_{t+1},
+forward_full,pmf_104203,-1,-0.007,4868,3075.0,-0.39,no,forward r_{t+1},
+forward_full,pmf_058341,+1,0.0334,5002,545.0,0.78,no,forward r_{t+1},
+forward_full,pmf_102135,-1,-0.00072,694,,,no,forward r_{t+1},
+forward_full,pmf_003678,-1,-0.01781,5077,246.0,-0.28,no,forward r_{t+1},
+forward_full,pmf_118259,+1,0.01138,718,189.0,0.16,no,forward r_{t+1},
+forward_full,pmf_051056,+1,0.00601,5077,987.0,0.19,no,forward r_{t+1},
+forward_full,pmf_055491,-1,-0.01221,5069,710.0,-0.33,no,forward r_{t+1},
+forward_full,pmf_066409,-1,-0.0235,5077,249.0,-0.37,no,forward r_{t+1},
+economic_prior,pmf_128453,0 (dropped),-0.01711,5020,,,no,economic prior,no derivable prior -> dropped
+economic_prior,pmf_011095,0 (dropped),-0.01268,4928,714.0,-0.34,no,economic prior,no derivable prior -> dropped
+economic_prior,pmf_069545,-1,-0.04008,720,272.0,-0.66,no,economic prior,prior applied
+economic_prior,pmf_051113,+1,0.00652,4247,859.0,0.19,no,economic prior,prior applied
+economic_prior,pmf_127111,0 (dropped),-0.00728,4991,,,no,economic prior,no derivable prior -> dropped
+economic_prior,pmf_125861,0 (dropped),-0.02003,5004,,,no,economic prior,no derivable prior -> dropped
+economic_prior,pmf_131810,0 (dropped),0.01742,5077,573.0,0.42,no,economic prior,no derivable prior -> dropped
+economic_prior,pmf_104203,+1,-0.007,4868,3075.0,-0.39,no,economic prior,prior applied
+economic_prior,pmf_058341,+1,0.0334,5002,545.0,0.78,no,economic prior,prior applied
+economic_prior,pmf_102135,+1,-0.00072,694,,,no,economic prior,prior applied
+economic_prior,pmf_003678,0 (dropped),-0.01781,5077,246.0,-0.28,no,economic prior,no derivable prior -> dropped
+economic_prior,pmf_118259,+1,0.01138,718,189.0,0.16,no,economic prior,prior applied
+economic_prior,pmf_051056,+1,0.00601,5077,987.0,0.19,no,economic prior,prior applied
+economic_prior,pmf_055491,+1,-0.01221,5069,710.0,-0.33,no,economic prior,prior applied
+economic_prior,pmf_066409,+1,-0.0235,5077,249.0,-0.37,no,economic prior,prior applied
+walkforward_forward,pmf_128453,time-varying,-0.01711,5020,,,no,"walk-forward, refit/21d","0 sign flips, final sign -1"
+walkforward_forward,pmf_011095,time-varying,-0.01268,4928,714.0,-0.34,no,"walk-forward, refit/21d","0 sign flips, final sign -1"
+walkforward_forward,pmf_069545,time-varying,-0.04008,720,272.0,-0.66,no,"walk-forward, refit/21d","0 sign flips, final sign -1"
+walkforward_forward,pmf_051113,time-varying,0.00652,4247,859.0,0.19,no,"walk-forward, refit/21d","7 sign flips, final sign +1"
+walkforward_forward,pmf_127111,time-varying,-0.00728,4991,,,no,"walk-forward, refit/21d","1 sign flips, final sign -1"
+walkforward_forward,pmf_125861,time-varying,-0.02003,5004,,,no,"walk-forward, refit/21d","1 sign flips, final sign -1"
+walkforward_forward,pmf_131810,time-varying,0.01742,5077,573.0,0.42,no,"walk-forward, refit/21d","7 sign flips, final sign +1"
+walkforward_forward,pmf_104203,time-varying,-0.007,4868,3075.0,-0.39,no,"walk-forward, refit/21d","2 sign flips, final sign -1"
+walkforward_forward,pmf_058341,time-varying,0.0334,5002,545.0,0.78,no,"walk-forward, refit/21d","0 sign flips, final sign +1"
+walkforward_forward,pmf_102135,time-varying,-0.00072,694,,,no,"walk-forward, refit/21d","0 sign flips, final sign +1"
+walkforward_forward,pmf_003678,time-varying,-0.01781,5077,246.0,-0.28,no,"walk-forward, refit/21d","3 sign flips, final sign -1"
+walkforward_forward,pmf_118259,time-varying,0.01138,718,189.0,0.16,no,"walk-forward, refit/21d","1 sign flips, final sign +1"
+walkforward_forward,pmf_051056,time-varying,0.00601,5077,987.0,0.19,no,"walk-forward, refit/21d","9 sign flips, final sign +1"
+walkforward_forward,pmf_055491,time-varying,-0.01221,5069,710.0,-0.33,no,"walk-forward, refit/21d","1 sign flips, final sign -1"
+walkforward_forward,pmf_066409,time-varying,-0.0235,5077,249.0,-0.37,no,"walk-forward, refit/21d","3 sign flips, final sign -1"

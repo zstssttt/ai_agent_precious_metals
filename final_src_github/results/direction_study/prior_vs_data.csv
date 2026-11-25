@@ -1,0 +1,16 @@
+﻿factor,prior,forward_ic,data_sign,n_eff,t_eff,verdict,economic_claim
+pmf_128453,0,-0.01711,-1,,,no prior (correlation-change factor),"Delta corr(DXY diff, SPDR flow diff) / GPR - a correlation change. No economic theory signs it."
+pmf_011095,0,-0.01268,-1,714.0,-0.34,no prior (correlation-change factor),"OLS slope of corr(DXY diff, SPDR flow return) - a correlation trend. No economic theory signs it."
+pmf_069545,-1,-0.04008,-1,272.0,-0.66,agrees (but |t|<2),"direction = sign(DXY 20d MA - 60d MA) = dollar strengthening. Gold is priced in USD, so a stronger dollar is a lower gold price."
+pmf_051113,1,0.00652,1,859.0,0.19,agrees (but |t|<2),direction = sign(GPR 5d MA trend) = geopolitical risk escalating. Safe-haven demand bids gold up.
+pmf_127111,0,-0.00728,-1,,,no prior (correlation-change factor),"Delta corr(Au9995 diff, SPDR diff) / implied vol. No economic theory signs it."
+pmf_125861,0,-0.02003,-1,,,no prior (correlation-change factor),"Delta corr(COMEX diff, SPDR cash diff) / GPR. No economic theory signs it."
+pmf_131810,0,0.01742,1,573.0,0.42,no prior (correlation-change factor),"Delta corr(ETF holdings diff, lagged 10Y yield return) / GPR. No economic theory signs it."
+pmf_104203,1,-0.007,-1,3075.0,-0.39,"disagrees, but |t|<2 so prior kept",signal = Aroon balance on SPDR holdings returns = inflow momentum. ETF creations are net new investment demand for bullion.
+pmf_058341,1,0.0334,1,545.0,0.78,agrees (but |t|<2),direction = sign(SPDR holdings 5d MA trend) = ETF inflow. Same claim as pmf_104203 on a trend rather than a breakout.
+pmf_102135,1,-0.00072,-1,,,"disagrees, but |t|<2 so prior kept",signal = sign(CPI 5d MA - 20d MA) = inflation accelerating. Gold is held as an inflation hedge. NOTE: Erb & Harvey (2013) show this link is weak at horizons under a decade - the weakest of the nine.
+pmf_003678,0,-0.01781,-1,246.0,-0.28,no prior (correlation-change factor),"Delta corr(TIPS diff, lagged ETF holdings diff). No economic theory signs it."
+pmf_118259,1,0.01138,1,189.0,0.16,agrees (but |t|<2),"direction = sign(CPI 20d MA - 60d MA) = medium-term inflation rising. Same claim as pmf_102135 on a slower window. The Bollinger `position` term can be negative, so sign(factor) != direction everywhere; the prior applies to the direction component."
+pmf_051056,1,0.00601,1,987.0,0.19,agrees (but |t|<2),direction = sign(GPR 5d MA trend) = geopolitical risk escalating. Same claim as pmf_051113 with a different intensity term.
+pmf_055491,1,-0.01221,-1,710.0,-0.33,"disagrees, but |t|<2 so prior kept",direction = sign(gold ATM IV 20d MA trend) = implied vol rising = the market is pricing more fear. Gold is a crisis hedge.
+pmf_066409,1,-0.0235,-1,249.0,-0.37,"disagrees, but |t|<2 so prior kept",direction = sign(GPR 20d MA - 60d MA) = medium-term geopolitical risk rising. Slower-window version of pmf_051056.
